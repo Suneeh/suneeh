@@ -1,0 +1,99 @@
+.app-shell__sidenav-container {
+    height: 100%;
+    overflow: auto; // to prevent margin collapse
+}
+
+.app-shell__sidenav {
+    width: 250px;
+    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
+    background: rgb(52, 63, 87);
+    background: linear-gradient(0deg, rgba(52, 63, 87, 1) 0%, rgba(2, 24, 54, 1) 100%);
+}
+
+.app-shell__sidenav-items-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.app-shell__branding-apps {
+    display: flex;
+    width: 100%;
+    padding: 1em;
+    height: 160px;
+    justify-content: center;
+
+    img {
+        max-width: 160px;
+    }
+}
+
+.app-shell__nav-list {
+    overflow: auto;
+}
+
+.app-shell__content {
+    box-sizing: border-box;
+}
+
+.app-shell__topbar {
+    gap: 1em;
+    background-color: transparent;
+}
+
+.app-shell__topbar>a:first-child {
+    margin-left: auto;
+}
+
+.app-shell__topbar-divider {
+    align-self: stretch;
+    margin: 1em 0;
+}
+
+.app-shell__topbar-app-information {
+    font-size: 10px;
+    line-height: 10px;
+    margin-right: 5em;
+}
+
+.app-shell__menu-item {
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 12px !important;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+    }
+}
+
+.app-shell__menu-item-text {
+    margin-left: 1em;
+}
+
+.app-shell__menu-divider {
+    margin: 1em 0;
+}
+
+.app-shell__router-link-active {
+    color: var(--ps-primary);
+    background-color: transparent;
+}
+
+.app-shell__main-content-container {
+    min-height: calc(100vh - 13em);
+    padding: 3em 100px;
+    margin: 0 auto;
+}
+
+.app-shell__main-content-footer {
+    padding: 3em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    font-weight: 600;
+}
