@@ -12,8 +12,8 @@ TODO
 
 ## Checklist
 -------
-- [ ] Create Database
-- [ ] Create Angular project
+- [x] Create Database
+- [x] Create Angular project
 - [ ] 1st Component
 - [ ] Import material-design
 - [ ] Write first hard coded blog article
