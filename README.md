@@ -18,15 +18,16 @@ ng serve -open
 - [x] Shell component
 - [x] Install and import material-design elements
 - [x] clean my css
-- [ ] use color variables
-- [ ] Get a shared module to de-bloat my imports
-- [ ] Starting page
+- [x] Starting page
+- [x] Impressum / not-found page
+- [x] Resume page
 - [ ] Blog page
-- [ ] Impressum / not-found page
+- [ ] Get a shared module to de-bloat my imports
 - [ ] Write first hard coded blog article
 - [ ] Login page
 - [ ] Login functionality
 - [ ] crud gui for blog posts
+- [ ] use color variables
 - [ ] ...
 
 ## Support

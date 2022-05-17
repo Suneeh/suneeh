@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 import { ShellComponent } from './shell/shell.component';
 import { ShellModule } from './shell/shell.module';
 
-const startPage = 'dashboard';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -18,14 +16,24 @@ const startPage = 'dashboard';
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: startPage,
-        pathMatch: 'full',
-      },
-      {
-        path: '',
         component: ShellComponent,
         children: [
-          // TODO - Add more routes - how does this work without libraries and routes.ts ? should be gigantic in here.
+          {
+            path: '',
+            loadChildren: () => import('./index/index.module').then((m) => m.IndexModule),
+          },
+          {
+            path: 'resume',
+            loadChildren: () => import('./resume/resume.module').then((m) => m.ResumeModule),
+          },
+          {
+            path: 'impressum',
+            loadChildren: () => import('./general/impressum/impressum.module').then((m) => m.ImpressumModule),
+          },
+          {
+            path: '**',
+            loadChildren: () => import('./general/not-found/not-found.module').then((m) => m.NotFoundModule),
+          },
         ],
       },
     ],

@@ -1,0 +1,24 @@
+.app-page-not-found-page__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.app-page-not-found-page__text-container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.app-page-not-found-page__caption {
+    font-weight: bold;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.app-page-not-found-page__return-home {
+    align-self: start;
+}

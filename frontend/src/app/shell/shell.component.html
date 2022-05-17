@@ -1,76 +1,57 @@
 <mat-sidenav-container class="app-shell__sidenav-container">
-    <mat-sidenav class="app-shell__sidenav">
-      <div class="app-shell__sidenav-items-container">
-        <a class="app-shell__branding-apps" [routerLink]="['/']" routerLinkActive="router-link-active">
-            <span>Suneeh - TODO PICTURE HERE</span>
+  <mat-sidenav class="app-shell__sidenav" [opened]="true" mode="side">
+    <div class="app-shell__sidenav-items-container">
+      <a class="app-shell__branding-apps" [routerLink]="['/']" routerLinkActive="router-link-active">
+        <span>Suneeh</span>
+      </a>
+      <mat-nav-list dense class="app-shell__nav-list">
+        <a class="app-shell__menu-item" mat-list-item [routerLink]="['/']"
+          routerLinkActive="app-shell__router-link-active">
+          <mat-icon mat-list-icon>home</mat-icon>
+          <span class="app-shell__menu-item-text">Home</span>
         </a>
-  
-        <mat-nav-list dense class="app-shell__nav-list">
-          <a
-            class="app-shell__menu-item"
-            mat-list-item
-            [routerLink]="['/dashboard']"
-            routerLinkActive="app-shell__router-link-active">
-            <mat-icon mat-list-icon>home</mat-icon>
-            <span class="app-shell__menu-item-text">Dashboard</span>
-          </a>
-          <a
-            class="app-shell__menu-item"
-            mat-list-item
-            [routerLink]="['/products']"
-            routerLinkActive="app-shell__router-link-active">
-            <mat-icon mat-list-icon>sell</mat-icon>
-            <span class="app-shell__menu-item-text">Produkte</span>
-          </a>
-          <mat-divider class="app-shell__menu-divider"></mat-divider>
-          <a
-            class="app-shell__menu-item"
-            mat-list-item
-            [routerLink]="['/operator']"
-            routerLinkActive="app-shell__router-link-active">
-            <mat-icon mat-list-icon>admin_panel_settings</mat-icon>
-            <span class="app-shell__menu-item-text">Operator</span>
-          </a>
-          <a
-            class="app-shell__menu-item"
-            mat-list-item
-            [routerLink]="['/admin']"
-            routerLinkActive="app-shell__router-link-active">
-            <mat-icon mat-list-icon>lock</mat-icon>
-            <span class="app-shell__menu-item-text">Admin</span>
-          </a>
-        </mat-nav-list>
-      </div>
-    </mat-sidenav>
-    <mat-sidenav-content class="app-shell__content">
-      <mat-toolbar class="app-shell__topbar">
-        <a mat-icon-button [matMenuTriggerFor]="accountSubMenu">
-          <mat-icon>account_circle</mat-icon>
-          <mat-menu #accountSubMenu="matMenu">
-            <a mat-menu-item>
-              <mat-icon>power_settings_new</mat-icon>
-              Ausloggen
-            </a>
-          </mat-menu>
+        <a class="app-shell__menu-item" mat-list-item [routerLink]="['/blog']"
+          routerLinkActive="app-shell__router-link-active">
+          <mat-icon mat-list-icon>article</mat-icon>
+          <span class="app-shell__menu-item-text">Blog</span>
         </a>
-        <mat-divider class="app-shell__topbar-divider" [vertical]="true"></mat-divider>
-        <div class="app-shell__topbar-app-information">
-          <div>woop woop</div>
-          <div>woop woop</div>
-        </div>
-      </mat-toolbar>
-      <div class="app-shell__main-content-container">
-        <router-outlet></router-outlet>
+        <a class="app-shell__menu-item" mat-list-item [routerLink]="['/resume']"
+          routerLinkActive="app-shell__router-link-active">
+          <mat-icon mat-list-icon>person_pin</mat-icon>
+          <span class="app-shell__menu-item-text">Resume</span>
+        </a>
+      </mat-nav-list>
+      <mat-nav-list dense class="app-shell__action-list">
+        <a class="app-shell__menu-item" mat-list-item [routerLink]="['/admin']"
+          routerLinkActive="app-shell__router-link-active">
+          <mat-icon mat-list-icon>lock</mat-icon>
+          <span class="app-shell__menu-item-text">Admin</span>
+        </a>
+      </mat-nav-list>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="app-shell__content">
+    <mat-toolbar class="app-shell__topbar">
+      <a>twitter</a>
+      <a>instagram</a>
+      <a>logo</a>
+      <mat-divider class="app-shell__topbar-divider" [vertical]="true"></mat-divider>
+      <div class="app-shell__topbar-app-information">
+        <div>App Version: v0.01</div>
+        <div>Last Change: 17.05.</div>
       </div>
-      <div class="app-shell__main-content-footer">
-        <div>
-          <span>© {{ year }} </span>
-          <a href="http://suneeh.de/" rel="noreferrer noopener" target="_blank">suneeh.de</a>
-        </div>
-        <div>
-          <a [routerLink]="['/', 'impressum']">Impressum</a>
-        </div>
+    </mat-toolbar>
+    <div class="app-shell__main-content-container">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="app-shell__main-content-footer">
+      <div>
+        <span>© {{ year }} </span>
+        <a href="http://suneeh.de/" rel="noreferrer noopener" target="_blank">suneeh.de</a>
       </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-  
+      <div>
+        <a [routerLink]="['/', 'impressum']">Impressum</a>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

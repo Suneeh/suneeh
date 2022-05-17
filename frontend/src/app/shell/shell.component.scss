@@ -6,8 +6,6 @@
 .app-shell__sidenav {
     width: 250px;
     box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
-    background: rgb(52, 63, 87);
-    background: linear-gradient(0deg, rgba(52, 63, 87, 1) 0%, rgba(2, 24, 54, 1) 100%);
 }
 
 .app-shell__sidenav-items-container {
@@ -20,17 +18,23 @@
 .app-shell__branding-apps {
     display: flex;
     width: 100%;
-    padding: 1em;
-    height: 160px;
+    height: 100px;
     justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
 
-    img {
-        max-width: 160px;
+    span {
+        font-size: larger;
     }
 }
 
 .app-shell__nav-list {
     overflow: auto;
+}
+
+.app-shell__action-list {
+    margin: auto 0 1em;
 }
 
 .app-shell__content {
@@ -60,7 +64,6 @@
 .app-shell__menu-item {
     color: #ffffff;
     background-color: transparent;
-    font-size: 12px !important;
     font-weight: bold;
 
     &:hover,
@@ -70,6 +73,7 @@
 }
 
 .app-shell__menu-item-text {
+    font-size: 14px;
     margin-left: 1em;
 }
 
@@ -78,7 +82,6 @@
 }
 
 .app-shell__router-link-active {
-    color: var(--ps-primary);
     background-color: transparent;
 }
 
